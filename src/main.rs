@@ -1,3 +1,5 @@
+use core::fmt;
+
 use clap::Parser;
 
 #[derive(Parser)]
@@ -12,13 +14,22 @@ struct Cli {
     text: Vec<String>,
 }
 
+impl fmt::Display for Cli {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+
+        write!(f, "{}", self.text.iter().map(|el| format!("{}", el)).fold(String::new(), |acc, arg| acc + " " + arg.as_str()))?;
+
+        Ok(())
+    }
+}
+
 fn main() {
     let cli = Cli::parse();
 
     if cli.newline {
-        print!("{:?}", cli.text);
+        print!("{}", cli);
     } else {
-        println!("{:?}", cli.text)
+        println!("{}", cli)
     }
     
 }
