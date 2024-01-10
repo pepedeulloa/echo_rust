@@ -1,6 +1,4 @@
-# Echo en Rust
-
-## Descripción
+# echo_rust
 
 Este repositorio contiene un programa en Rust que emula el comportamiento del comando `echo` de Unix. Utilizando la biblioteca `clap`, proporciona la capacidad de gestionar argumentos de línea de comandos y controlar la adición de saltos de línea entre los argumentos de salida.
 
