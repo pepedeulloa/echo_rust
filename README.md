@@ -14,9 +14,9 @@ This program has been developed using Rust version 1.74.0. Command-line argument
 
 ## Options
 
- - -n, --newline: Do not append the arguments on a new line.
- - -h, --help: Show the program's help.
- - -V, --version: Show the program's version.
+ - `-n, --newline`: Do not append the arguments on a new line.
+ - `-h, --help`: Show the program's help.
+ - `-V, --version`: Show the program's version.
 
 ## Usage
 
